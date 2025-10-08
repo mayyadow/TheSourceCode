@@ -12,8 +12,8 @@
     width:100%;
     height:100%;
     z-index: 1;
-    justify-content: center; /* centers horizontally */
-    align-items: flex-start; /* aligns children to top */
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
 #title-page {
