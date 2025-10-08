@@ -1,0 +1,64 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    height: 100vh;
+}
+
+.main {
+    background-color: rgb(54,51,52);
+    display: flex;
+    position: relative;
+
+    width:100%;
+    height:100%;
+    z-index: 1;
+    justify-content: center; /* centers horizontally */
+    align-items: flex-start; /* aligns children to top */
+}
+
+#title-page {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    max-width: 40%;
+    max-height: 40%;
+    align-items: center;
+
+}
+
+.sticky-notes {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 0;
+}
+
+
+.note {
+    background-color: #f4e1a1;
+    color: #333;
+    padding: 10px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px 5px 5px 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    transform: translateX(-80px);
+    transition: transform 0.3s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+
+.note:hover {
+    transform: translateX(0px);
+    background-color: #ffefb5;
+}
+
+
+.note1 { background-color: #D4AE6B; }
+.note2 { background-color: #B76D79; }
+.note3 { background-color: #C5BBB8; }
+
