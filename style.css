@@ -25,7 +25,7 @@ body {
     justify-content: start; 
     align-items: center; 
 
-    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 #logo {
@@ -45,15 +45,18 @@ body {
     color: #C5BBB8;
     background-color: #2C2930;
     box-shadow: 10px 10px #b8c5c0;
+    border-radius: 10px;
     width: 80%;
 }
 
 .content-border-box p {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 200;
-    padding: 10px 30px;
+    padding: 18px 30px;
     display: block;
+    font-size: medium;
     margin: 0 auto;
+    text-shadow: 1px 1px 2px black;
 }
 
 /* MAIN COLUMN - flipbook*/
@@ -63,15 +66,22 @@ body {
     align-items: center;
     margin-top: 5%;
     margin-bottom: 100px;
+    height: 100%;
     width: 80%;
+    padding: 30px 0;
+    background-image: url("bg-images/watermarble.jpg");
+    background-repeat: repeat;
+    opacity: 0.8;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px black;
 }
 
 .book {
+    margin: 30px 20px;
     position: relative;
     height: 90vh;
     width: 70vh;
     transition: transform 0.5s;
-    /* box-shadow: 10px 0px 10px black; */
 }
 
 .paper {
@@ -130,7 +140,8 @@ button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 4rem;
+    font-weight: 900;
     height: 40px;
     display: block;
     margin: 0 auto;
@@ -138,7 +149,7 @@ button {
     transition: transform 0.5s;
 
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 0px 0px 10px black;
 }
 
 
