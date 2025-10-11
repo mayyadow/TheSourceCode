@@ -32,6 +32,8 @@ body {
     max-width: 40%;
     max-height: 40%;
     align-items: center;
+    position: relative;
+    z-index: 2;
 
 }
 
@@ -69,4 +71,10 @@ body {
 
 #about-note{ background-color: #B76D79; }
 #contact-note { background-color: #C5BBB8; }
+
+#ripped-page {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
 
