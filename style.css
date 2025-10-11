@@ -5,27 +5,29 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 8fr;
     background-color: #2C2930;
     width: 100%;
     height: 100vh;
+    overflow: visible;
 }
 
+/* MAIN COLUMN */
 .main {
+    padding-top: 30px;
     background-image:url('background0.png');
     display: flex;
-    position: relative;
-
+    flex-direction: column;
     width:100%;
     height:100%;
-    z-index: 1000;
-    justify-content: center; 
-    align-items: flex-start; 
+    z-index: 10;
+    justify-content: start; 
+    align-items: center; 
 
-    box-shadow: 20px 20px 50px rgba(255, 12, 12, 0.2);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-#title-page {
+#logo {
     width: auto;
     height: auto;
     object-fit: contain;
@@ -37,40 +39,77 @@ body {
 
 }
 
+.content-border-box {
+    margin-top: 40px;
+    color: #C5BBB8;
+    background-color: #2C2930;
+    box-shadow: 10px 10px #b8c5c0;
+    width: 80%;
+}
+
+.content-border-box p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    padding: 10px 30px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* STICKY NOTE COLUMN */
+.sticky-notes {
+    z-index: 1;
+    height: 100vh;
+}
+
 
 .note {
     color: #333;
-    padding: 10px;
-    margin-left: 30%;
+    margin-left: 10%;
+    height: 40px;
     margin-bottom: 10px;
     margin-top: 10px;
-    height: 40px;
-    border-radius: 5px 0 0 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-    /* transform: translateX(-80px); */
+    padding: 20px 30px;
+    padding-right: 50px;
+    padding-left: 40px;
+    border-radius: 30px 0 0 60px;
+    box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, background-color 0.2s ease;
     cursor: pointer;
+    z-index: 1;
 
 }
 
 .note p {
     display: block;
     margin: auto auto;
+    font-size: 15px;
+    text-shadow: -0.5px 0.5px 1px rgb(100, 100, 100);
+
 }
 
 .note:hover {
-    transform: translateX(50px);
+    transform: translateX(30px);
     background-color: #ffefb5;
 }
 
 
 #issue-note { 
     background-color: #D4AE6B;
-    
+    border: 5px solid #B76D79;
+    border-right: none;
 }
 
-#about-note{ background-color: #B76D79; }
-#contact-note { background-color: #C5BBB8; }
+#about-note { 
+    background-color: #B76D79; 
+    border: 5px solid #544871;
+    border-right: none;
+}
+
+#contact-note { 
+    background-color: #C5BBB8; 
+    border: 5px solid #746161;
+    border-right: none;
+}
 
 #ripped-page {
     position: absolute;
