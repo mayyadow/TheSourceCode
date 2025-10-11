@@ -40,6 +40,14 @@ body {
 
 }
 
+#about {
+    width: 65%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: -20px;
+
+}
+
 .content-border-box {
     margin-top: 40px;
     color: #C5BBB8;
@@ -122,7 +130,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     width: 80%;
-    margin: 40px auto;
+    margin-top: -100px;
 }
 
 .photo-grid img{
