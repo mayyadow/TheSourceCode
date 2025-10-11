@@ -15,7 +15,8 @@ body {
 
 /* MAIN COLUMN */
 .main {
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    position: relative;
     background-image:url('background0.png');
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@ body {
     box-shadow: 10px 10px #b8c5c0;
     border-radius: 10px;
     width: 80%;
+    z-index: 2;
 }
 
 .content-border-box p {
@@ -54,9 +56,9 @@ body {
     font-weight: 200;
     padding: 18px 30px;
     display: block;
-    font-size: medium;
+    font-size: 2rem;
     margin: 0 auto;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 2px 1px 5px black;
 }
 
 /* MAIN COLUMN - flipbook*/
@@ -224,6 +226,7 @@ button:hover {
 .note:hover {
     transform: translateX(30px);
     background-color: #ffefb5;
+    box-shadow: -6px 6px 6px rgba(82, 82, 82, 0.2);
 }
 
 
@@ -249,6 +252,17 @@ button:hover {
     position: absolute;
     right: 0;
     z-index: 1;
+}
+
+#ripped-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    width: 40%;
+    opacity: 0.8;
 }
 
 .photo-grid {
