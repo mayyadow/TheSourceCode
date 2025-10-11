@@ -265,6 +265,11 @@ button:hover {
     opacity: 0.8;
 }
 
+#footer {
+    margin-bottom: 5%;
+    color: #C5BBB8;
+}
+
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
