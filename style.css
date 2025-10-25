@@ -15,7 +15,8 @@ body {
 
 /* MAIN COLUMN */
 .main {
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    position: relative;
     background-image:url('background0.png');
     display: flex;
     flex-direction: column;
@@ -25,7 +26,7 @@ body {
     justify-content: start; 
     align-items: center; 
 
-    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 #logo {
@@ -53,15 +54,150 @@ body {
     color: #C5BBB8;
     background-color: #2C2930;
     box-shadow: 10px 10px #b8c5c0;
+    border-radius: 10px;
     width: 80%;
+    z-index: 2;
 }
 
 .content-border-box p {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 200;
-    padding: 10px 30px;
+    padding: 18px 30px;
+    display: block;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-shadow: 2px 1px 5px black;
+}
+
+/* MAIN COLUMN - flipbook*/
+#feature-flipbook {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 100px;
+    height: 100%;
+    width: 80%;
+    padding: 30px 0;
+    background-image: url("bg-images/watermarble.jpg");
+    background-repeat: repeat;
+    opacity: 0.8;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px black;
+}
+
+.book {
+    margin: 30px 20px;
+    position: relative;
+    height: 90vh;
+    width: 70vh;
+    transition: transform 0.5s;
+}
+
+.paper {
+    /* absolute so pages overlap */
+    position: absolute;
+    width: 70vh;
+    height: 90vh;
+    /* for 3D effect */
+    perspective: 1500px;
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 1px solid black;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+    box-shadow: 0 5px 5px black;
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 4rem;
+    font-weight: 900;
+    height: 40px;
     display: block;
     margin: 0 auto;
+    padding-bottom: 10px;
+    transition: transform 0.5s;
+
+    color: white;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+button:hover {
+    color: #636363;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 8;
+}
+
+#p2 {
+    z-index: 7;
+}
+
+#p3 {
+    z-index: 6;
+}
+
+#p4 {
+    z-index: 5;
+}
+
+#p5 {
+    z-index: 4;
+}
+
+#p6 {
+    z-index: 3;
+}
+
+#p7 {
+    z-index: 2;
+}
+
+#p8 {
+    z-index: 1;
 }
 
 /* STICKY NOTE COLUMN */
@@ -72,7 +208,7 @@ body {
 
 
 .note {
-    color: #333;
+    color: #151515;
     margin-left: 10%;
     height: 40px;
     margin-bottom: 10px;
@@ -98,6 +234,7 @@ body {
 .note:hover {
     transform: translateX(30px);
     background-color: #ffefb5;
+    box-shadow: -6px 6px 6px rgba(82, 82, 82, 0.2);
 }
 
 
@@ -123,6 +260,22 @@ body {
     position: absolute;
     right: 0;
     z-index: 1;
+}
+
+#ripped-corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    width: 40%;
+    opacity: 0.8;
+}
+
+#footer {
+    margin-bottom: 5%;
+    color: #C5BBB8;
 }
 
 .photo-grid {
