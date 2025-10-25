@@ -42,11 +42,10 @@ a:active {
 }
 
 #logo {
-    width: auto;
-    height: auto;
+    display: block;
+    margin: auto auto;
+    width: 85%;
     object-fit: contain;
-    max-width: 40%;
-    max-height: 40%;
     align-items: center;
     position: relative;
     z-index: 2;
@@ -216,6 +215,7 @@ button:hover {
 .sticky-notes {
     z-index: 1;
     height: 100vh;
+    font-weight: bold;
 }
 
 
