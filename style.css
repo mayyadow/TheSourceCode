@@ -81,14 +81,19 @@ a:active {
 }
 
 /* MAIN COLUMN - flipbook*/
+#flipbook-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #feature-flipbook {
     display:flex;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
     margin-bottom: 0;
-    height: 100%;
-    width: 80%;
+    width: 1000px;
     padding: 30px 0;
     background-image: url("/images/bg-images/watermarble.jpg");
     background-repeat: repeat;

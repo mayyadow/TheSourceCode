@@ -2,6 +2,7 @@
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
 const book = document.querySelector("#book");
+const featureflip = document.querySelector("#feature-flipbook")
 
 const paper1 = document.querySelector("#p1");
 const paper2 = document.querySelector("#p2");
@@ -24,7 +25,8 @@ let numOfPapers = 8;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
-    book.style.transform = "scale(70%) translateX(50%)";
+    book.style.transform = "scale(80%) translateX(50%)";
+    // featureflip.style.transform = "scaleX(100%)";
     prevBtn.style.transform = "translateX(-180px)";
     nextBtn.style.transform = "translateX(180px)";
 }
