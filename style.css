@@ -96,7 +96,7 @@ a:active {
 }
 
 .content-border-box {
-    margin-top: 40px;
+    margin-top: 5%;
     color: #ebe1de;
     background-color: #2C2930;
     box-shadow: 10px 10px #b8c5c0;
@@ -273,6 +273,12 @@ button:hover {
 
 #p8 {
     z-index: 1;
+}
+
+#featured-book-pdf-link {
+    margin-top: 2%;
+    font-size: 0.7rem;
+    color: #a0b7fc;
 }
 
 /* STICKY NOTE COLUMN */
