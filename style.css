@@ -7,12 +7,12 @@ body {
 footer {
     margin: 4rem auto;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         font-size: 20%;
     }
 }
 
-@media (width <=40em) {
+@media (width <=60em) {
     .sticky-notes {
         display: none;
     }
@@ -41,7 +41,7 @@ a:active {
 #nav-btn {
     display: none;
 
-    @media (width <=40em) {
+    @media (width <=60em) {
         display: flex;
         font-size: 20px;
         font-family: 'Courier New', Courier, monospace;
@@ -68,7 +68,7 @@ a:active {
 
     box-shadow: -6px 6px 5px rgba(0, 0, 0, 0.2);
 
-    @media (width <=40em) {
+    @media (width <=60em) {
         width: 100vw;
     }
 }
@@ -82,7 +82,7 @@ a:active {
     position: relative;
     z-index: 2;
 
-    @media (width <=40em) {
+    @media (width <=60em) {
         width: 60%;
     }
 }
@@ -114,7 +114,7 @@ a:active {
     margin: 0 auto;
     text-shadow: 2px 1px 5px black;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         text-align: center;
         font-size: 1.1rem;
     }
@@ -151,7 +151,7 @@ a:active {
     width: 70vh;
     transition: transform 0.5s;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         height: 300px;
         width: 100px;
     }
@@ -165,7 +165,7 @@ a:active {
     /* for 3D effect */
     perspective: 1500px;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         height: 300px;
         width: 100px;
     }
@@ -183,7 +183,7 @@ a:active {
     transform-origin: left;
     transition: transform 0.5s;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         height: 300px;
         width: 200px;
     }
@@ -325,7 +325,7 @@ button:hover {
     border: 5px solid #B76D79;
     border-right: none;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         border: 5px solid #B76D79;
     }
 }
@@ -335,7 +335,7 @@ button:hover {
     border: 5px solid #544871;
     border-right: none;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         border: 5px solid #544871;
     }
 }
@@ -345,7 +345,7 @@ button:hover {
     border: 5px solid #746161;
     border-right: none;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         border: 5px solid #746161;
     }
 }
@@ -355,7 +355,7 @@ button:hover {
     right: 0;
     z-index: 1;
 
-    @media (width <=40em) {
+    @media (width <=60em) {
         width: 45%;
         height: 200px;
         z-index: -2;
@@ -373,7 +373,7 @@ button:hover {
     width: 40%;
     opacity: 0.8;
 
-    @media (width <=40em) {
+    @media (width <=60em) {
         width: 45%;
         z-index: -2;
         opacity: 0.7;
@@ -399,7 +399,7 @@ button:hover {
     gap: 50px;
     width: 80%;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -432,7 +432,7 @@ button:hover {
     color:#ff9dad;
     text-align: center;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         font-size: 10px;
     }
 }
@@ -442,7 +442,7 @@ button:hover {
     margin-top: 10%;
     width: 50%;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         width: 90%;
     }
 }
@@ -474,7 +474,7 @@ button:hover {
 .prev-issue img {
     box-shadow: 0px 0px 20px #000000;
 
-    @media (width <= 40em) {
+    @media (width <= 60em) {
         width: 90%;
     }
 }
