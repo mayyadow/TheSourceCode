@@ -6,7 +6,19 @@ body {
 
 footer {
     margin: 4rem auto;
+
+    @media (width <= 40em) {
+        font-size: 20%;
+    }
 }
+
+@media (width <=40em) {
+    .sticky-notes {
+        display: none;
+    }
+}
+
+/* STICKY NOTES TABS COLUMN */
 a:link,
 a:visited,
 a:hover,
@@ -24,7 +36,23 @@ a:active {
     overflow: visible;
 }
 
+
 /* MAIN COLUMN */
+#nav-btn {
+    display: none;
+
+    @media (width <=40em) {
+        display: flex;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        color: #ececec;
+        font-weight: 200;
+        margin-left: 10px;
+        margin-top: 30px;
+        padding-bottom: 10px;
+    }
+}
+
 .main {
     /* padding-top: 30px; */
     position: relative;
@@ -39,6 +67,10 @@ a:active {
     align-items: center; 
 
     box-shadow: -6px 6px 5px rgba(0, 0, 0, 0.2);
+
+    @media (width <=40em) {
+        width: 100vw;
+    }
 }
 
 #logo {
@@ -50,6 +82,9 @@ a:active {
     position: relative;
     z-index: 2;
 
+    @media (width <=40em) {
+        width: 60%;
+    }
 }
 
 #about {
@@ -78,31 +113,48 @@ a:active {
     font-size: 1.5rem;
     margin: 0 auto;
     text-shadow: 2px 1px 5px black;
+
+    @media (width <= 40em) {
+        text-align: center;
+        font-size: 1.1rem;
+    }
 }
 
 /* MAIN COLUMN - flipbook*/
+#flipbook-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 #feature-flipbook {
     display:flex;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
     margin-bottom: 0;
-    height: 100%;
-    width: 80%;
+    width: 1000px;
     padding: 30px 0;
     background-image: url("/images/bg-images/watermarble.jpg");
     background-repeat: repeat;
     opacity: 0.8;
     border-radius: 30px;
-    box-shadow: 10px 10px 25px black;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+
 }
 
-.book {
+#book {
     margin: 30px 20px;
     position: relative;
     height: 90vh;
     width: 70vh;
     transition: transform 0.5s;
+
+    @media (width <= 40em) {
+        height: 300px;
+        width: 100px;
+    }
 }
 
 .paper {
@@ -112,6 +164,12 @@ a:active {
     height: 90vh;
     /* for 3D effect */
     perspective: 1500px;
+
+    @media (width <= 40em) {
+        height: 300px;
+        width: 100px;
+    }
+
 }
 
 .front,
@@ -124,12 +182,18 @@ a:active {
     left: 0;
     transform-origin: left;
     transition: transform 0.5s;
+
+    @media (width <= 40em) {
+        height: 300px;
+        width: 200px;
+    }
 }
 
 .front {
     z-index: 1;
     backface-visibility: hidden;
     border-left: 1px solid black;
+
 }
 
 .back {
@@ -169,7 +233,7 @@ button {
     padding-bottom: 10px;
     transition: transform 0.5s;
 
-    color: white;
+    color: #e2d7d3;
     text-shadow: 0px 0px 10px black;
 }
 
@@ -243,7 +307,7 @@ button:hover {
 
 }
 
-.note:hover {
+.note:hover, .note-menu:hover {
     transform: translateX(30px);
     background-color: #ffefb5;
     box-shadow: -6px 6px 6px rgba(82, 82, 82, 0.2);
@@ -254,24 +318,43 @@ button:hover {
     background-color: #D4AE6B;
     border: 5px solid #B76D79;
     border-right: none;
+
+    @media (width <= 40em) {
+        border: 5px solid #B76D79;
+    }
 }
 
 #about-note {
     background-color: #B76D79; 
     border: 5px solid #544871;
     border-right: none;
+
+    @media (width <= 40em) {
+        border: 5px solid #544871;
+    }
 }
 
 #contact-note { 
     background-color: #C5BBB8; 
     border: 5px solid #746161;
     border-right: none;
+
+    @media (width <= 40em) {
+        border: 5px solid #746161;
+    }
 }
 
 #ripped-page {
     position: absolute;
     right: 0;
     z-index: 1;
+
+    @media (width <=40em) {
+        width: 45%;
+        height: 200px;
+        z-index: -2;
+        opacity: 0.7;
+    }
 }
 
 #ripped-corner {
@@ -283,6 +366,13 @@ button:hover {
     z-index: 1;
     width: 40%;
     opacity: 0.8;
+
+    @media (width <=40em) {
+        width: 45%;
+        z-index: -2;
+        opacity: 0.7;
+        height: 150px;
+    }
 }
 
 #footer {
@@ -302,6 +392,10 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     width: 80%;
+
+    @media (width <= 40em) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .photo-grid img{
@@ -328,10 +422,23 @@ button:hover {
     cursor: default;
 }
 
+#maya-temp {
+    color:#ff9dad;
+    text-align: center;
+
+    @media (width <= 40em) {
+        font-size: 10px;
+    }
+}
+
 /* CONTACT PAGE */
 #join-us-img {
-    box-shadow: 5px 5px 10px #2C2930;
+    margin-top: 10%;
     width: 50%;
+
+    @media (width <= 40em) {
+        width: 90%;
+    }
 }
 
 /* ARCHIVES PAGE */
@@ -360,6 +467,10 @@ button:hover {
 }
 .prev-issue img {
     box-shadow: 0px 0px 20px #000000;
+
+    @media (width <= 40em) {
+        width: 90%;
+    }
 }
 .prev-issue img:hover {
     box-shadow: 0px 0px 20px #848484;
@@ -367,4 +478,23 @@ button:hover {
 .prev-issue p {
     font-size: 1rem;
     color: #C5BBB8;
+}
+
+/* MENU FOR MOBILE PAGE */
+#menu-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.note-menu {
+    color: #151515;
+    margin: 5% auto;
+    height: fit-content;
+    width: 90%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px 10px;
 }
